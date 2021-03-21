@@ -1,0 +1,606 @@
+/* sidans kanter */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  använder total bredd */
+body{
+    width:100%;
+
+}
+html{
+    font-family: arial;
+
+}
+
+.källa{
+    
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 1rem 0rem 1rem 2rem ;
+    position: relative;
+}
+
+/* utseende/ bildsektion */
+.gallery{
+    width:400px;
+    display: inline-block;
+    margin-left: 4.5rem;
+    margin-right: 1rem;
+    box-shadow: 1px;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    border-top: 0.5px solid rgb(0, 0, 0);
+    border-bottom: 0.5px solid rgb(0, 0, 0);
+}
+/* utseende av en bild */
+.gallery img{
+    width:400px;
+    height:300px;
+    border-radius: 4px;
+    margin: 1rem auto;
+}
+/*  sidans ändring vid bredden 770px och högre/ desktop vy */
+
+@media screen and (min-width: 769px) {
+    *{
+        box-sizing: border-box;
+    }
+    /* navbars utssende */
+    nav{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        background-color: rgb(59, 88, 100);
+        justify-content: space-between;
+        line-height: 50px;
+        align-items: stretch;
+        text-decoration: none;
+        position: fixed;
+        text-transform: uppercase;
+        z-index: 1000;
+        text-align: center;
+    }
+    #demo{
+        margin: 0;
+        padding: 0;
+    }
+
+      .toggle-sidebar{
+       visibility: hidden;
+       height: 50px;;
+    }
+    .links{
+        margin: 0 auto;
+    }
+    .links a{
+        color: #fff;
+        text-decoration: none;
+        padding: 1rem;
+        font-size: 14px;
+    }
+    
+    /* hur sidospalten ska se ut */
+    .row {  
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .side {
+        flex: 20%;
+        background-color: rgb(250, 246, 246);
+        padding: 16px;
+        font-size: 1rem;
+        line-height: 1.9rem;
+        font-family: 'Courgette', cursive;
+      }
+      .b-w {
+        width: 100%;
+        padding: 10px;
+      }
+      /* huvuddelen tar 80% av sidans bredd */
+      .main{
+          flex: 80%;
+          background-color: white;
+          padding: 10px;
+      }
+      #profil{
+          line-height: 1rem;
+          font-size: 1rem;
+          padding: 1rem;
+          text-align: justify;
+      }
+      #rub{
+        margin: 1rem 5rem 1rem 5rem;;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-radius: 5px;
+        
+    }
+      
+    p{
+        padding: 4rem;
+        line-height: 2rem;
+        font-size: 1.1rem;
+        text-align: justify;
+        margin-top: 0px;
+        
+    }
+    .fo{
+        padding: 0rem 4rem 1rem 3rem;
+        margin: 1rem 4rem 1rem 4rem ;
+
+    }
+    .fo2{
+        padding: 4rem 4rem 0rem 4rem;
+    }
+    .fo3{
+        padding: 4rem 4rem 0rem 4rem;
+    }
+    .pic{
+        width: 600px;
+        height: 400px;
+        display: inline-block;
+        float: right;
+        margin: 1rem;
+        box-shadow: 0px 0px 0px ;
+        padding: 3rem 2rem 3rem 2rem;
+    }
+    /* bilden i header */
+    .responsive{
+        width: 80%;
+        border-radius: 5px;
+        padding: 1rem;
+        margin: 1rem 1rem 0rem 7rem;;
+        
+    }
+    /* alla rubriker */
+    h1{
+    
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0;
+    }
+    h2, h3{
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 0;
+    }
+ 
+    h4{
+        font-size: 0.9rem;
+    }
+    h5{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 1px solid;
+        border-radius: 5px;
+    
+       
+    }
+    h6{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-radius: 4px;
+        margin: 1rem;
+        margin-top: -150px;
+        
+    }
+    footer{
+        height:4rem;
+        background-color: rgb(182, 226, 243);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+
+}
+ /* tablet view*/
+@media screen and (max-width: 768px){
+
+    .side, .side h5, .b-w, #profil {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    .side h5{
+        margin-top: 0;
+    
+    }
+    nav{
+        background-color: rgb(255, 255, 73);
+        content: hidden;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        text-decoration: none;
+        position: fixed;
+        text-transform: uppercase;
+        z-index: 1000;
+        text-align: center;
+        
+    }
+    /* toggle meny */
+    .toggle{
+        width: 50px;
+        height: 100%;
+        background-color: rgb(241, 239, 200);
+        background-image: url("toggle.png");
+        background-repeat: no-repeat;
+        background-size: 65%;
+        background-position: center;
+        cursor: pointer; 
+        z-index: 1000;
+    }
+    .toggle:hover{
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    /* när menyn öppnas/ hur visar länkarna */
+    .toggle-sidebar{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: calc(100vh - 50px);
+        background-color: rgb(252, 248, 244);
+        text-transform: uppercase;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    
+    }
+    /* menyns länkar */
+    .toggle-sidebar ul{
+    padding-top: 10px;
+    overflow: hidden;
+    visibility: hidden;
+    
+    }
+    .toggle-sidebar ul li{
+        line-height: 30px;
+        list-style: none;
+    
+    }
+    /* länkar */
+    .toggle-sidebar ul li span , .toggle-sidebar ul li a{
+        display: block;
+        height: 30px;
+        padding: 1rem;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: arial;
+        font-size: 14px;
+        white-space: nowrap;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+    }
+    .toggle-sidebar ul li a:hover{
+        background-color: rgb(206, 183, 149)
+    
+    }
+    h1{
+        margin: 0 auto;
+
+        padding: 4rem 1rem 1rem 4rem;
+        font-size: 1.5rem;
+    }
+    #rub{
+        margin: 1rem 5rem 1rem 5rem;;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-radius: 5px;
+        
+    }
+    h5{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 1rem 3rem 1rem 0rem;;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    h6{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        border: 0px solid;
+        border-radius: 4px;
+        margin: 1rem 3rem 1rem 0rem;;
+        border: 0px solid;
+    }
+    /* navbars länkar som inte ska synas */
+    .links a{
+        padding: 0.7rem;
+        font-size: 0px;
+        visibility: hidden;
+
+    }
+    p{
+
+        line-height: 1.8rem;
+        font-size: 1rem;
+        text-align: justify;
+        margin-top: 0px;
+        
+    }
+    .fo{
+        padding: 0rem 4rem 1rem 3rem;
+        margin: 1rem 4rem 0rem 5rem ;
+
+    }
+    .fo2{
+        padding: 0rem 4rem 2rem 4rem;
+    }
+    .fo3{
+        padding: 1rem 4rem 2rem 4rem;
+    }
+    .box {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 0;
+        
+    }
+    .källa{
+        height: 0px;
+    
+     visibility: hidden;
+        
+    }
+   
+    .responsive{
+        width: 70%;
+        height: 300px;
+        justify-content: center;
+        padding: 1rem 0rem 0rem 7rem;
+        border-radius: 5px;
+    }
+    
+    .pic{
+        width: 70%;
+        height: 400px;
+        margin: 0 auto;
+    }
+    /*  bildernas läge i bildsektion */
+    .gallery{
+        width:400px;
+        height:300px;
+        padding: 2rem;
+        display: inline-block;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 2rem;
+        border-left: 0px solid;
+        border-right: 0px solid;
+        border-top: 0.5px solid rgb(0, 0, 0);
+        border-bottom: 0.5px solid rgb(0, 0, 0);
+    }
+    
+    .foto1,.foto2{
+        padding-left: 5rem;
+        justify-content: center;
+
+    }
+    footer{
+        height:4rem;
+        background-color: rgb(247, 247, 149);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        height:3rem;
+    }
+} 
+
+/*  mobilvy börjar här/ bredden mindre än 669px */
+@media screen and (max-width:669px) {
+
+    nav{
+        background-color: rgb(216, 156, 25);
+    
+    }
+    .d{
+        margin-top: 0;
+        padding: 0;
+        height: 0;
+        width: 0;
+    
+    }
+    .toggle{
+        width: 50px;
+        height: 100%;
+        background-color: rgba(236, 236, 195, 0.575);
+        background-image: url("toggle.png");
+        background-repeat: no-repeat;
+        background-size: 65%;
+        background-position: center;
+        cursor: pointer; 
+        z-index: 1000;
+    }
+    .toggle:hover{
+        opacity: 0.5;
+    }
+    .toggle-sidebar{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: calc(100h - 50px);
+        text-transform: uppercase;
+        z-index: 1000;
+        transition: all 0.5s ease-in-out;
+        background-color: rgb(252, 248, 244);  
+    }
+    .toggle-sidebar ul{
+    padding-top: 0px;
+    visibility: hidden;
+    
+    }
+    .toggle-sidebar ul li{
+        line-height: 30px;
+        list-style: none;
+    
+    }
+    .toggle-sidebar ul li span , .toggle-sidebar ul li a{
+        display: block;
+        height: 30px;
+        padding: 1rem;
+        text-decoration: none;
+        color: rgb(235, 81, 81);
+        font-family: arial;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    
+    }
+    .toggle-sidebar ul li a:hover{
+        background-color: rgb(206, 183, 149)
+    
+    }
+    .links a{
+        font-size: 10px;
+        visibility: hidden;
+    }
+    
+    h1{
+        font-size: 1.4rem;
+        padding-left: 6rem;
+    }
+    h5{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+    h6{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        border: 0px solid;
+        border-radius: 4px;
+        margin: 1rem;  
+    }
+    p{
+        font-size: 1rem;
+        line-height: 1.7rem;
+        
+    }
+    .fo{
+        padding: 0rem 2rem 1rem 1rem;
+        margin: 1rem 2rem 0rem 4rem ;
+
+    }
+    .fo2{
+        padding: 0rem 4rem 2rem 4rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        text-align: justify;
+        position: flex;
+    }
+    .fo3{
+        padding: 0rem 4rem 2rem 4rem;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        text-align: justify;
+        position: flex;
+    }
+    .responsive{
+        width: 70%;
+        height: 300px;
+        padding: 1rem 0rem 0rem 7rem;
+        align-content: center;
+        border-radius: 5px;
+
+    }
+    .källa{
+    
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+  
+    p{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+       
+        position: flex;
+
+    }
+    .pic{
+        max-width: 360px;
+        width: 70%;
+        height: 250px;
+        margin: 0rem 0rem 0rem 7rem;
+        padding: 0;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column-reverse;    
+    }
+
+    .foto1,.foto2{
+        padding-left: 5rem;
+        justify-content: center;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+
+    }
+    .foto1,.foto2{
+        padding-left: 5rem;
+        justify-content: center;
+
+    }
+    .gallery{
+        
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        width:400px;
+        height:300px;
+        padding: 0rem 2rem 0rem 1rem ;
+        margin: 1rem 3rem 0rem 1rem;
+        display: inline-block;
+        text-align: center;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border-bottom: 0px;
+        
+    }
+    
+    footer{
+        font-size: 0.8rem;
+        height:3rem;
+        background-color: rgb(245, 245, 163);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+}
