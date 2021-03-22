@@ -1,4 +1,4 @@
-
+// hello github
 //när menyn är stängd/ ska funktionen köra false statement
 
 let toggleNavStatus = false;
@@ -51,7 +51,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = txt;
     // om bredden är större än x så gäller funktionen alert
     if ( w > 768 ) {
-        alert("Desktop view");
+        alert("Desktop view!!!");
     }
     // annars om den är mindre än x, gäller alert
     else if( w < 669) {
